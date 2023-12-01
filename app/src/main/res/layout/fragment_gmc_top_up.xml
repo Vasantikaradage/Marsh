@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/enrollment_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/marginTop"
+        android:paddingBottom="100dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/title_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_gmctopup"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblTopupType"
+            style="@style/EnrollTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:includeFontPadding="false"
+            android:text="@string/ghi_top"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/timer_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/material_size_12"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/timer_top_up_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="6dp"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_stop_watch"
+                app:drawableTint="@color/white"
+                tools:text="12:12:12" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/left_margin"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/cardMargin"
+                android:text="@string/rs"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/left_margin"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:layout_marginEnd="@dimen/right_margin"
+            android:layout_marginBottom="@dimen/cardMargin"
+            android:background="@drawable/black_border"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/layoutPadding"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/EnrollTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="base sum insured" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGMCbaseamt"
+                style="@style/TextViewAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:includeFontPadding="false"
+                android:text="Rs. 50,000/-" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/chkOpttop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/left_margin"
+            android:layout_marginTop="@dimen/material_size_12"
+            android:layout_marginEnd="@dimen/right_margin"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/lblTopupQuery"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/left_margin"
+            android:layout_marginEnd="@dimen/right_margin"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/topupAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="Amount"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/largeTextSize"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/chkbox"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/premiumTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginRight="@dimen/cardMargin"
+                android:fontFamily="@font/setpoppins"
+                android:text="Premium"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/largeTextSize"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/spnTopUpamt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/transparent"
+            android:dividerHeight="0sp"
+            android:listSelector="@color/cpb_blue_dark"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/topuplayoout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/setpoppins"
+            android:gravity="center"
+            android:paddingTop="@dimen/cardMargin"
+            android:paddingBottom="@dimen/cardMargin"
+            android:text=""
+            android:textSize="@dimen/textSize"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llGHIdisclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_margin"
+            android:layout_marginEnd="@dimen/right_margin"
+            android:layout_marginBottom="@dimen/cardBottomMargin"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Switch
+                android:id="@+id/chkPayTopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lblPayTopup"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/textSize"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            style="@style/Enroll_Button_theme2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/left_margin"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:layout_marginRight="@dimen/left_margin"
+            android:text="next"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

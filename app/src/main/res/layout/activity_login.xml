@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clipToPadding="false"
+    tools:context=".onboarding.authentication.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:clipToPadding="false">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/right_margin"
+            android:paddingRight="@dimen/right_margin"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageView
+                android:id="@+id/AppImage"
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_marsh_blue_logo" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:text="@string/sign_in"
+                android:textAllCaps="true"
+                android:textColor="@color/icon_color"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/toolbarIconSize"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:text="HELLO!"
+                android:textColor="@color/textcolorgreen"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/material_size_12"
+                android:fontFamily="@font/setpoppins_medium"
+                android:text="Let's get started"
+                android:textColor="@color/cpb_grey"
+                android:textSize="@dimen/largeTextSize" />
+
+            <TextView
+                android:id="@+id/entertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/setpoppins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/login_with"
+                android:textColor="@color/icon_color"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="125dp"
+                android:layout_height="2.5dp"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@color/primary_variant"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="0dp">
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/radio_group_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/number_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/mobile_number"
+                    android:textColor="@drawable/radio_flat_text_selector" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gradient_start" />
+
+                <RadioButton
+                    android:id="@+id/email_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/official_e_mail_id"
+                    android:textColor="@drawable/radio_flat_text_selector" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gradient_end" />
+
+                <RadioButton
+                    android:id="@+id/web_cred_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/web_credentials"
+                    android:textColor="@drawable/radio_flat_text_selector" />
+            </RadioGroup>
+
+            <!--   <include
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/credentialTabs"
+                   layout="@layout/view_pager_tab_layout" />-->
+
+            <TextView
+                android:id="@+id/error_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/error_occurred"
+                android:textColor="@color/cpb_red"
+                android:textSize="@dimen/textSize"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/phone_number_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/largeTextSize"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/largeTextSize"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/nhborder"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:src="@drawable/ic_phone_call"
+                    app:tint="@color/grey2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:gravity="center"
+                    android:text="+91"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/phone_number_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:digits="0123456789"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:hint="Enter your registered mobile number"
+                    android:inputType="number|phone"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingHorizontal="3dp"
+                    android:paddingVertical="@dimen/cardMargin"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginVertical="@dimen/material_size_24"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/material_size_12"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="OR"
+                    android:textAlignment="center" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/background" />
+
+            </LinearLayout>
+
+
+            <!-- email login layout-->
+            <LinearLayout
+                android:id="@+id/email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/largeTextSize"
+                android:layout_marginEnd="@dimen/largeTextSize"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/nhborder"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_by_email"
+                    app:tint="@color/grey2" />
+
+                <EditText
+                    android:id="@+id/email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:hint="Enter your registered e-mail ID"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="@dimen/cardMargin"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <!--web credentials layout-->
+            <LinearLayout
+                android:id="@+id/web_cred_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/web_cred_group_name_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/largeTextSize"
+                    android:layout_marginTop="@dimen/cardLeftMargin"
+                    android:layout_marginEnd="@dimen/largeTextSize"
+                    android:background="@drawable/nhborder"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_by_group"
+                        app:tint="@color/icon_color" />
+
+                    <EditText
+                        android:id="@+id/web_cred_group_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:hint="Group code"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/web_cred_user_name_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/largeTextSize"
+                    android:layout_marginTop="@dimen/cardLeftMargin"
+                    android:layout_marginEnd="@dimen/largeTextSize"
+                    android:background="@drawable/nhborder"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_by_user"
+                        app:tint="@color/icon_color" />
+
+                    <EditText
+                        android:id="@+id/web_cred_user_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:hint="Username"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/web_cred_password_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/largeTextSize"
+                    android:layout_marginTop="@dimen/cardLeftMargin"
+                    android:layout_marginEnd="@dimen/largeTextSize"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/nhborder"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/password_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_password"
+                        app:tint="@color/icon_color" />
+
+                    <EditText
+                        android:id="@+id/web_cred_password_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginEnd="@dimen/cardMargin"
+                        android:layout_toStartOf="@id/password_visible"
+                        android:layout_toEndOf="@id/password_icon"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+
+                    <ImageView
+                        android:id="@+id/password_visible"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_visible"
+                        app:tint="@color/icon_color" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!--   <Button
+                   android:id="@+id/next"
+                   android:layout_width="match_parent"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="@dimen/largeTextSize"
+                   android:layout_marginTop="@dimen/cardTopMargin"
+                   android:layout_marginEnd="@dimen/largeTextSize"
+                   android:layout_marginBottom="@dimen/material_size_12"
+                   android:background="@drawable/ripple_effect_button"
+                   android:fitsSystemWindows="true"
+                   android:fontFamily="@font/poppinssemibold"
+                   android:text="@string/sign_in"
+                   android:textAllCaps="true"
+                   android:textAppearance="?android:attr/textAppearanceSmall"
+                   android:textColor="@color/cpb_white"
+                   android:textSize="17sp"
+                   android:textStyle="bold" />-->
+
+            <RelativeLayout
+                android:id="@+id/next_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/roundedsquare"
+                android:clipToPadding="false"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                tools:targetApi="p">
+
+                <TextView
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="center"
+                    android:text="@string/sign_in"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

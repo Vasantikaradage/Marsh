@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/cardMargin"
+    app:cardBackgroundColor="@color/claim_file_background"
+    app:cardCornerRadius="@dimen/left_margin"
+    app:cardElevation="0dp">
+
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/material_size_4"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/file_image"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/material_size_6"
+            android:src="@drawable/file_upload" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/file_add"
+            android:layout_toEndOf="@id/file_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/material_size_4"
+                android:fontFamily="@font/setpoppins_medium"
+                android:includeFontPadding="false"
+                android:textColor="@color/file_name_textcolor"
+                android:textSize="15sp"
+                tools:text="Pan Card" />
+
+            <TextView
+                android:id="@+id/item_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/material_size_4"
+                android:fontFamily="@font/setpoppins_medium"
+                android:includeFontPadding="false"
+                android:textColor="@color/error_text_color"
+                android:textSize="11sp"
+                android:visibility="gone"
+                tools:text="30kb" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/file_add"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/material_size_6"
+            android:src="@drawable/file_add" />
+
+        <ImageView
+            android:id="@+id/file_remove"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/material_size_6"
+            android:src="@drawable/file_remove"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

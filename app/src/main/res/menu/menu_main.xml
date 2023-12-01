@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/supportFragment"
+        android:icon="@drawable/ic_phone_call"
+        android:title="Contact"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/ecardFragment"
+        android:icon="@drawable/ic_by_e_card"
+        android:title="E-card"
+        app:showAsAction="withText" />
+    <item android:title="" />
+    <item
+        android:id="@+id/utilitiesFragment"
+        android:icon="@drawable/ic_by_utilities"
+        android:title="Utilities"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/profileFragmentListService"
+        android:icon="@drawable/ic_more"
+        android:title="More"
+        app:showAsAction="withText" />
+
+</menu>

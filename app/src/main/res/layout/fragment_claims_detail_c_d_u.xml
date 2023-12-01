@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".insurance.claimdataupload.views.ClaimsDetailFragmentCDU">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/material_size_12">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/isClaimIntimatedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/claim_detail_intimated_header_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/material_size_8"
+                    android:layout_marginTop="@dimen/material_size_8"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="Is Claim Intimated?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/material_size_14" />
+
+                <RadioGroup
+                    android:id="@+id/is_claim_intimated_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_8">
+
+                    <RadioButton
+                        android:id="@+id/claim_intimated_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Yes"
+                        android:textColor="#6A7381" />
+
+                    <RadioButton
+                        android:id="@+id/claim_intimated_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/material_size_8"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="No"
+                        android:textColor="#6A7381" />
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/where_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/isClaimIntimatedLayout"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/claim_detail_intimated_header_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/material_size_12"
+                    android:layout_marginTop="@dimen/material_size_12"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="Where was your claim Intimated?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/material_size_14" />
+
+                <RadioGroup
+                    android:id="@+id/is_claim_intimated_radio_group_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_8">
+
+                    <RadioButton
+                        android:id="@+id/claim_intimated_yes_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Benefits you"
+
+                        android:textColor="#6A7381" />
+
+                    <RadioButton
+                        android:id="@+id/claim_intimated_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/material_size_8"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Third party administrator (TPA)"
+                        android:textColor="#6A7381" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/where_layout"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/claim_detail_intimated_header_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/material_size_12"
+                    android:layout_marginTop="@dimen/material_size_12"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="What is the “Type of Claim” you have?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/material_size_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/material_size_8"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_pre_hospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/material_size_8"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Pre-Hospitalization claim"
+                        android:textColor="#6A7381" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkbox_main_hospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/material_size_8"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Main-Hospitalization claim"
+                        android:textColor="#6A7381" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_post_hospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/material_size_8"
+                        android:background="@drawable/radio_cdu"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Post-Hospitalization claim"
+                        android:textColor="#6A7381" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

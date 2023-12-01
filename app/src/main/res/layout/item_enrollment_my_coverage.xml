@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coverage_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/cardTopMargin"
+    android:layout_marginTop="@dimen/cardTopMargin"
+    android:layout_marginEnd="@dimen/cardTopMargin"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/constraintlayoutback"
+    android:padding="@dimen/material_size_12"
+    android:visibility="visible">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/coverage_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/topupicon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/my_coverage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/cardLeftMargin"
+        android:layout_toRightOf="@id/coverage_icon"
+        android:text="Group Health Insurance"
+        android:textColor="@color/white" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sum_insured"
+        style="@style/EnrollTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_coverage_title"
+        android:layout_marginLeft="@dimen/cardLeftMargin"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/coverage_icon"
+        android:text="300,000" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sum_insured_type"
+        style="@style/EnrollSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_coverage_title"
+        android:layout_alignBaseline="@id/sum_insured"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/sum_insured"
+        tools:text="(Floater)"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/premium_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sum_insured"
+        android:layout_toEndOf="@id/coverage_icon">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/premiumAmountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/premiumAmount"
+            android:layout_marginStart="15dp"
+            android:includeFontPadding="false"
+            android:padding="@dimen/material_size_2"
+            android:text="@string/premium"
+            android:textColor="@color/white" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/premiumAmount"
+            style="@style/RupeeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/premiumAmountTitle"
+            android:padding="@dimen/material_size_2"
+            android:textColor="@color/white"
+            tools:text="₹ 3,000" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/premiumAmountType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/premiumAmount"
+            android:padding="@dimen/material_size_2"
+            android:textColor="@color/white"
+            tools:text="(Floater)" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/coverage_tooltip_image"
+        android:layout_width="@dimen/material_size_24"
+        android:layout_height="@dimen/material_size_24"
+        android:layout_alignBottom="@id/premium_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/material_size_12"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_info_tooltip"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/timer_coverage_details"
+        style="@style/RupeeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coverage_tooltip_image"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/coverage_icon"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@drawable/ic_stop_watch"
+        app:drawableTint="@color/white"
+        tools:text="12:12:12" />
+
+    <!-- <ImageView
+         android:id="@+id/coverage_stop_watch_icon"
+         android:layout_width="@dimen/material_size_24"
+         android:layout_height="@dimen/material_size_24"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentEnd="true"
+         android:layout_marginHorizontal="@dimen/material_size_12"
+         android:layout_marginEnd="12dp"
+         android:src="@drawable/ic_stop_watch"
+         app:tint="@color/white" />-->
+
+</RelativeLayout>

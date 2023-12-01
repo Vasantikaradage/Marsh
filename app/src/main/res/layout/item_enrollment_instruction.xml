@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/item_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/cardTopMargin"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/inst_tick_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/instruction_text"
+            style="@style/EnrollmentTextViewAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:hyphenationFrequency="normal"
+            android:text="Verify the accuracy of your personal information - names, birth dates, and relations of your eligible dependants." />
+    </LinearLayout>
+</LinearLayout>
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_marginTop="@dimen/cardMargin"
+    android:layout_marginStart="@dimen/left_margin"
+    android:layout_marginEnd="@dimen/right_margin"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#a4f700"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/currencyTxt"
+        android:text="Group Sum Insured"
+        style="@style/summary_button"
+        android:id="@+id/header_txt"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/currencyTxt"
+       android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/summary_rs"
+        android:textColor="#a4f700" />
+</RelativeLayout>

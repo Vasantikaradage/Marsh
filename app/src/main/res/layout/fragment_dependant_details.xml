@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipetoRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/enrollment_bg"
+    tools:context=".insurance.enrollment.ui.DependantDetailsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/inst_card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/cardTopMargin"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/marginTop"
+            android:paddingBottom="100dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/header_dependant_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dependants"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/header_dependant_text"
+                style="@style/EnrollTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Dependant Details"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/timer_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/material_size_12"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/timer_dependant_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableStartCompat="@drawable/ic_stop_watch"
+                    app:drawableTint="@color/white"
+                    tools:text="12:12:12" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddParent"
+                style="@style/Enroll_Button_theme2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="add new"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/inst1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:text="You can add upto 3 dependants\nSpouse/Partner + 2 children"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/EnrollmentTextViewAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inst1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginBottom="@dimen/cardBottomMargin"
+                android:gravity="center"
+                android:text="You can add, modify or delete your dependant details during the open enrollment window period"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dependant_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:layout_marginBottom="@dimen/cardTopMargin"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_enrollment_dependant_details" />
+
+            <ProgressBar
+                android:id="@+id/avi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/llNext"
+                style="@style/Enroll_Button_theme2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/right_margin"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:text="next"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

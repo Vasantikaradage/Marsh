@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nhborder"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/material_size_6">
+
+    <ImageView
+        android:id="@+id/loading_gif"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/material_size_12"
+        app:srcCompat="@drawable/ic_popupal" />
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/load_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/textSize"
+        android:layout_marginBottom="@dimen/textSize"
+        android:layout_toEndOf="@id/loading_gif"
+        android:fontFamily="@font/setpoppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/grey1"
+        android:textSize="16sp"
+        tools:text="LOADING...." />
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_employee_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_employee_detail_label"
+            style="@style/HintApperance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:text="@string/employee_name"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <RelativeLayout
+            android:id="@+id/editing_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_employee_detail_label">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/item_employee_detail_text"
+                style="@style/TextViewAppearance1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/full_names" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_employee_detail_text_view"
+                style="@style/TextViewAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                tools:text="@tools:sample/full_names" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/item_edit_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_employee_detail_label"
+            android:layout_toEndOf="@id/editing_layout"
+            android:src="@drawable/ic_pencil_svg" />
+
+    </RelativeLayout>
+</RelativeLayout>

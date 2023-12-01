@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/enrollment_bg"
+    tools:context=".insurance.enrollment.ui.EmployeeDetailsFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardLeftMargin"
+            android:layout_marginRight="@dimen/cardLeftMargin"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_gender"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_male_employee"
+                android:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/empTitle"
+                style="@style/EnrollTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_gender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:includeFontPadding="false"
+                android:text="@string/employee_details"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/timer_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/empTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/material_size_12"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/timer_employee_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableStartCompat="@drawable/ic_stop_watch"
+                    app:drawableTint="@color/white"
+                    tools:text="12:12:12" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/loadingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="@dimen/cardElevation"
+                android:indeterminate="true"
+                android:visibility="visible" />
+
+            <View
+
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/cardBottomMargin"
+                android:background="#dddddd"
+                android:visibility="visible" />
+
+            <LinearLayout
+
+                android:id="@+id/mainView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timer_holder"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="12dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/constraintlayoutback"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:paddingTop="@dimen/cardTopMargin"
+                android:paddingBottom="@dimen/cardTopMargin"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/employee_details_cycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_enrollment_employee_details" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextpage"
+        style="@style/Enroll_Button_theme"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/cardMargin"
+        android:text="@string/next"
+        android:visibility="gone" />
+
+</RelativeLayout>

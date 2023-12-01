@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/completeView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_margin"
+    android:layout_marginTop="@dimen/cardTopMargin"
+    android:layout_marginEnd="@dimen/right_margin"
+    android:animateLayoutChanges="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:id="@+id/deleteView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/cardMargin"
+            android:src="@drawable/delete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/cardMargin"
+            android:paddingStart="@dimen/cardMargin"
+            android:text="Remove"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPremium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/familylayoutback"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/top_up_item_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_up_bg_50">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dependant_icon_back"
+                android:orientation="vertical"
+                android:padding="@dimen/cardMargin">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lblOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Option 1"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="@id/chkbox"
+                    app:layout_constraintRight_toRightOf="@id/chkbox"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/chkbox"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:gravity="center"
+                    app:buttonTint="@color/colorRadio"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:animateLayoutChanges="true"
+                android:paddingStart="@dimen/left_margin"
+                android:paddingBottom="@dimen/cardMargin">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/topupAmt"
+                    style="@style/EnrollTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:includeFontPadding="false"
+                    android:text="5,00,000"
+                    app:layout_constraintBottom_toTopOf="@id/premiumTxt"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/premiumTxt"
+                    style="@style/HintApperance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:text="Premium Rs. 5,000/-"
+                    android:textColor="#a4f700"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_critical_illness"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topupAmt" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_critical_illness"
+                    style="@style/HintApperance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:text="Premium Rs. 5,000/-"
+                    android:textColor="#a4f700"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/txt_critical_illness"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkedRadio" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/checkedRadio"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/inst_tick_icon"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

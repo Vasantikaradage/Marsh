@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "169694279494",
+    "project_id": "marsh-india-benefits-you",
+    "storage_bucket": "marsh-india-benefits-you.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169694279494:android:f827dd950bd87680aad747",
+        "android_client_info": {
+          "package_name": "com.marsh.android.MB360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169694279494-9jv527lc77lb1ti2reij1iedm0atibee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marsh.android.MB360",
+            "certificate_hash": "7425fbfdda635d9d6e112bd9370a5b8e4e38274f"
+          }
+        },
+        {
+          "client_id": "169694279494-dgpvgbvh97g0qrvstv07oqp57q8gr9r3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL1YHRJC40y0kl-WXOmA-VrwdDbc2CxrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169694279494-dgpvgbvh97g0qrvstv07oqp57q8gr9r3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "169694279494-js8jfc86jiepavocnq6oil8v6f52310s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thynksight.marsh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

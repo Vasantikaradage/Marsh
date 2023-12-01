@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black70">#B3000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black35">#59000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- progressbar color -->
+    <color name="background_color">#F2000000</color>
+    <color name="foreground_color">#b42379</color>
+    <color name="background_text_color">#808080</color>
+    <color name="foreground_text_color">#eeeeee</color>
+    <color name="yellow">#EAC645</color>
+
+
+    <!-->Colors from old version (need rework in names) <-->
+    <color name="cpb_grey">#909090</color>
+    <color name="div_grey">#cccccc</color>
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_blue_dark">#ff00719b</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_white">@android:color/white</color>
+    <color name="cpb_black">#000000</color>
+    <color name="transparent">#0000</color>
+
+    <color name="btnColor">#4b66ea</color>
+    <color name="pc">#4B66EA</color>
+    <color name="textcolorgreen">#16381F</color>
+
+    <!--===============New Design=========================-->
+
+    <color name="light_grey">#e5e5e5</color>
+    <color name="hint_grey">#9A9A9A</color>
+    <color name="dark_grey">#969696</color>
+
+    <color name="dark_black">#000000</color>
+    <color name="light_black">#545454</color>
+    <color name="gradient">#238cec</color>
+    <!--    <color name="gradient_start">#238cec</coloradn>
+        <color name="gradient_center">#6784EF</color>-->
+    <color name="icon_color">#002C77</color>
+    <color name="primary_variant">#002C77</color>
+    <color name="gradient_start">#009DE0</color>
+    4470c7
+    <color name="gradient_claim_center">#4470c7</color>
+    <color name="gradient_end">#8246AF</color>
+    <color name="purple">#8246AF</color>
+    <color name="turquoise">#00968F</color>
+    <color name="marsh_back">#C7EDFF</color>
+    <color name="title_back">#4DC7EDFF</color><!--f3f6fe-->
+    <color name="label_color">#000000</color>
+
+    <color name="steps_error">#e7505a</color>
+    <color name="steps_error_bg">#fef7f8</color>
+
+    <color name="claimsSuccess">#00AC41</color>
+    <color name="title_back_2">#F8F9FA</color>
+    <!--walkthrough-->
+
+    <!-- Screens background color-->
+
+    <!-- dots inactive colors -->
+    <color name="color_grey">#c4c3c3</color>
+
+    <!-- dots active colors -->
+    <!--       Wellness    -->
+
+    <color name="greencolorprimaryDark">#0cc46d</color>
+
+    <!-- Status Color -->
+    <color name="grey1">#828282</color>
+    <color name="grey2">#a9a9a9</color>
+    <color name="enrollment_summary_bg_start">#66000000</color>
+    <color name="enrollment_summary_bg_end">#66000000</color>
+    <color name="enrollment_summary_bg_center">#4D000000</color>
+
+    <color name="red">#ff0000</color>
+    <color name="bluelightback">#DBECFD</color>
+
+    <color name="background">#C2C2C2</color>
+    <color name="background1">#EDEDED</color>
+    <color name="error_icon_color">#CFCFCF</color>
+    <color name="error_text_color">#6A7381</color>
+    <color name="background3">#545454</color>
+
+    <color name="dark_grey_text">#252525</color>
+    <color name="hr_back">#f5f5f5</color>
+
+
+    <color name="bluedarkbg">#0171d5</color>
+    <color name="yellowdarkbg">#ff8f26</color>
+    <color name="yellowlightbg">#ffbb3d</color>
+    <color name="greenlightbg2">#3ed9b1</color>
+    <color name="greendarkbg1">#40e0d0</color>
+
+    <color name="reset_btn">#dadada</color>
+
+
+    <!-- Status Color -->
+    <color name="text_color">#484646</color>
+
+    <color name="reimbColor">#4B77BE</color>
+
+    <color name="claim_rejected">#D91E18</color>
+
+    <color name="grey_back_color">#f1efef</color>
+    <color name="claim_file_background">#eef1f6</color>
+    <color name="file_name_textcolor">#121417</color>
+
+
+    <!--=============EnrollmentColors===========================-->
+    <color name="dodger_blue">#4887ff</color>
+
+    <color name="colorRadio">#a4f700</color>
+    <color name="overlay_progress">#804D4D4D</color>
+    <color name="pink">#EE3D8B</color>
+    <color name="stroke_color">#CDD3DD</color>
+
+</resources>

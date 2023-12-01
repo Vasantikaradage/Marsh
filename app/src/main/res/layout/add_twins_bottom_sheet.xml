@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/cardLeftMargin"
+            android:paddingTop="@dimen/cardLeftMargin"
+            android:paddingRight="@dimen/right_margin"
+            android:paddingBottom="@dimen/cardMargin"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/material_size_12"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:text="add new dependant"
+                android:textColor="@color/cpb_black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/name_inst"
+                android:textColor="@color/cpb_grey"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTxt" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/spnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please select one"
+                android:textColor="@color/cpb_red"
+                android:textSize="@dimen/textSize"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblRelation"
+                    style="@style/HintApperance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relation"
+                    android:textColor="@color/cpb_black"
+                    android:transitionName="lblRelation"
+                    android:visibility="visible"
+                    tools:text="@tools:sample/first_names" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvpremium1"
+                    style="@style/HintApperanceone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/TextInputAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="First Name + Last Name"
+                android:nextFocusForward="@id/etDOB">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNAme"
+                    style="@style/TextInputAppearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords|textImeMultiLine"
+                    android:maxLength="100"
+                    android:nextFocusDown="@id/etDOB"
+                    android:nextFocusForward="@id/etDOB"
+                    android:paddingStart="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llshdiffabled1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/cpb_blue_dark"
+                    android:textSize="14dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swisDiffabled1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:theme="@style/MySwitch" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/cpb_blue_dark"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Is Child differently abled and not working?"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/left_margin"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDOB"
+                    style="@style/TextInputAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:nextFocusForward="@id/rbTwinGender"
+                    android:transitionName="lblDOB"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tilAge">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDOB"
+                        style="@style/TextInputAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:hint="@string/lblDOB"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:textSize="@dimen/mediumTextSize" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAge"
+                    style="@style/TextInputAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@id/tilDOB"
+                    app:layout_constraintLeft_toRightOf="@id/tilDOB"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tilDOB">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAge"
+                        style="@style/TextInputAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:hint="@string/lblAge"
+                        android:inputType="number"
+                        android:paddingStart="0dp"
+                        android:textSize="@dimen/mediumTextSize" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lliddiffabled1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUploadDoc1"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/gradient"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Upload Disability Document"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvuploadeddocname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/bg_rounded_corner"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="30dp"
+                    android:text="Select file"
+                    android:textColor="@color/light_black"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/ivdeleteimage1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-32dp"
+                    android:background="@drawable/ic_cancel"
+                    android:gravity="center"
+                    android:textColor="@color/light_black"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rbTwinGender"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbTwinMale"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/radio_background"
+                    android:button="@color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_marginEnd="@dimen/right_margin"
+                    android:gravity="center_vertical"
+                    android:text="male"
+                    android:textColor="@color/cpb_black" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbTwinFemale"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/radio_background"
+                    android:button="@color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_marginEnd="@dimen/right_margin"
+                    android:gravity="center_vertical"
+                    android:text="female"
+                    android:textColor="@color/cpb_black" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/dashed_border"
+                android:backgroundTint="@color/cpb_black" />
+
+            <TextView
+                android:id="@+id/genderError1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select gender"
+                android:textColor="#FFDD2C00"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblRelation2"
+                    style="@style/HintApperance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Child 2"
+                    android:textColor="@color/cpb_black"
+                    android:transitionName="lblRelation"
+                    android:visibility="visible"
+                    tools:text="@tools:sample/first_names" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvpremium2"
+                    style="@style/HintApperanceone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName2"
+                style="@style/TextInputAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="First Name + Last Name"
+                android:nextFocusForward="@id/etDOB2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNAme2"
+                    style="@style/TextInputAppearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords|textImeMultiLine"
+                    android:maxLength="100"
+                    android:nextFocusDown="@id/etDOB2"
+                    android:nextFocusForward="@id/etDOB2"
+                    android:paddingStart="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llshdiffabled2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/cpb_blue_dark"
+                    android:textSize="14dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swisDiffabled2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:theme="@style/MySwitch" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/cpb_blue_dark"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Is Child differently abled and not working?"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/left_margin"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDOB2"
+                    style="@style/TextInputAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:nextFocusForward="@id/rbTwinGender"
+                    android:transitionName="lblDOB"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tilAge">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDOB2"
+                        style="@style/TextInputAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:hint="@string/lblDOB"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:textSize="@dimen/mediumTextSize" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@id/tilDOB"
+                    app:layout_constraintLeft_toRightOf="@id/tilDOB"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tilDOB">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAge2"
+                        style="@style/TextInputAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:hint="@string/lblAge"
+                        android:inputType="number"
+                        android:paddingStart="0dp"
+                        android:textSize="@dimen/mediumTextSize" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lliddiffabled2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUploadDoc2"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/gradient"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Upload Disability Document"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvuploadeddocname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/bg_rounded_corner"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="30dp"
+                    android:text="Select file"
+                    android:textColor="@color/light_black"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/ivdeleteimage2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-32dp"
+                    android:background="@drawable/ic_cancel"
+                    android:gravity="center"
+                    android:textColor="@color/light_black"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rbTwinGender2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbTwinMale2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/radio_background"
+                    android:button="@color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_marginEnd="@dimen/right_margin"
+                    android:gravity="center_vertical"
+                    android:text="male"
+                    android:textColor="@color/cpb_black" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbTwinFemale2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/radio_background"
+                    android:button="@color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_marginEnd="@dimen/right_margin"
+                    android:gravity="center_vertical"
+                    android:text="female"
+                    android:textColor="@color/cpb_black" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/genderError2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select gender"
+                android:textColor="#FFDD2C00"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/left_margin"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@+id/ll2">
+
+                <include
+                    android:id="@+id/save"
+                    layout="@layout/add_button_dependant" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginBottom="@dimen/cardTopMargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedsquare"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/cancel_layout"
+                    layout="@layout/cancel_button_background" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

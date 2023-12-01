@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/insurance_toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/insurance_toolbar_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/insurance_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/App_font_toolBar"
+            app:titleTextColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_white_marsh_logo"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</RelativeLayout>

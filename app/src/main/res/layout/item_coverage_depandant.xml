@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/material_size_4"
+    app:cardBackgroundColor="#F8F9FB"
+    app:cardCornerRadius="@dimen/material_size_4"
+    app:cardElevation="0dp"
+    app:strokeColor="#CCD5E4"
+    app:strokeWidth="1dp">
+
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_size_4"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@id/item_dependant_relation"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="@dimen/material_size_6"
+            android:src="@drawable/ic_by_user" />
+
+        <TextView
+            android:id="@+id/item_dependant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/user_image"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Lorem ipsum"
+            android:textColor="#6A7381"
+            android:textSize="@dimen/material_size_14" />
+
+        <TextView
+            android:id="@+id/item_dependant_relation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_dependant_name"
+            android:layout_toEndOf="@id/user_image"
+            android:fontFamily="@font/setpoppins_medium"
+            android:includeFontPadding="false"
+            android:text="Employee"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <RadioButton
+            android:id="@+id/dependant_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/item_secondary_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dependant_radio_btn"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/material_size_6"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/divider_coverage"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/dependant_radio_btn"
+                    android:layout_marginHorizontal="@dimen/material_size_6"
+                    android:background="#CDD3DD" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/item_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="Age : 20 years"
+                        android:textColor="#6A7381"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_dob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="DOB : 01-Jan-2003"
+                        android:textColor="#6A7381"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/item_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="Age : 20 years"
+                        android:textColor="#6A7381"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="DOB : 01-Jan-2003"
+                        android:textColor="#6A7381"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

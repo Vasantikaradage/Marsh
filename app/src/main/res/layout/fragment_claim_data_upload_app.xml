@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".insurance.claimdataupload.ClaimDataUploadFragmentApp">
+
+    <com.marsh.android.MB360.utilities.progressview.ProgressView
+        android:id="@+id/state_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_size_12"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@color/primary_variant"
+        app:spb_currentStateNumber="one"
+        app:spb_descriptionTopSpaceIncrementer="5dp"
+        app:spb_enableAllStatesCompleted="false"
+        app:spb_maxStateNumber="three"
+        app:spb_stateBackgroundColor="@color/background1"
+        app:spb_stateDescriptionColor="@color/background1"
+        app:spb_stateDescriptionSize="15sp"
+        app:spb_stateForegroundColor="@color/primary_variant"
+        app:spb_stateLineThickness="3dp"
+        app:spb_stateNumberBackgroundColor="@color/grey1"
+        app:spb_stateNumberForegroundColor="@color/white"
+        app:spb_stateSize="18dp"
+        app:spb_stateTextSize="13sp" />
+
+
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/claim_data_upload_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/state_progress_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@color/claim_file_background">
+
+        <RelativeLayout
+            android:id="@+id/bottom_nav_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/back_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/next_layout"
+                android:layout_marginHorizontal="@dimen/material_size_24"
+                android:layout_marginBottom="@dimen/material_size_4"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/back_layout_image"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:rotation="90"
+                    android:src="@drawable/ic_by_drop_down"
+                    app:tint="@color/gradient_start" />
+
+                <TextView
+                    android:id="@+id/back_layout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="Back"
+                    android:textColor="@color/gradient_start"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/next_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="@dimen/material_size_24"
+                android:layout_marginVertical="@dimen/material_size_24"
+                app:cardBackgroundColor="#009DE0"
+                app:cardCornerRadius="@dimen/material_size_8"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/material_size_4"
+                    android:layout_marginVertical="@dimen/material_size_2"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/material_size_2">
+
+                    <TextView
+                        android:id="@+id/next_layout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/setpoppins"
+                        android:includeFontPadding="false"
+                        android:text="Beneficiary details"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/next_layout_image"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:rotation="-90"
+                        android:src="@drawable/ic_by_drop_down"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

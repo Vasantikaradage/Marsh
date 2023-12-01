@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:centerColor="@color/enrollment_summary_bg_center"
+        android:endColor="@color/enrollment_summary_bg_end"
+        android:startColor="@color/enrollment_summary_bg_start" />
+
+    <corners android:radius="15dp" />
+</shape>

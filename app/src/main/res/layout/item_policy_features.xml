@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_policy_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/cardMargin"
+    android:layout_marginTop="@dimen/cardMargin"
+    android:layout_marginRight="@dimen/cardMargin"
+    android:layout_marginBottom="@dimen/material_size_2"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/item_policy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/policyHeight"
+            android:animateLayoutChanges="true"
+            android:background="@color/title_back">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_policy_index"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/cardLeftMargin"
+                android:background="@drawable/badge_blue"
+                android:backgroundTint="@color/gradient_start"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="center"
+                android:textColor="@color/cpb_white"
+                android:textSize="@dimen/mediumTextSize"
+                android:visibility="visible"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/item_policy_main_header"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="55dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Family Information" />
+
+            <ImageView
+                android:id="@+id/down_arrow_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:rotation="180"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_by_drop_down" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inner_policy_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/layoutPadding"
+            android:visibility="visible">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/inner_policy_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_inner_policy_feature" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_margin"
+    android:layout_marginEnd="@dimen/right_margin"
+    android:layout_marginBottom="@dimen/cardTopMargin"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Set of Parents - Sum Insured - Rs. 3,00,000/-"
+        android:textColor="#a4f700"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblInstructions"
+        style="@style/TextViewAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(50% borne by Employee)"
+        android:textColor="#a4f700"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:background="@drawable/dashed_border" />
+
+</LinearLayout>

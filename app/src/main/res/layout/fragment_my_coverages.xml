@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/enrollment_bg"
+    tools:context=".insurance.enrollment.ui.MyCoveragesFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+
+            <LinearLayout
+                android:id="@+id/intro3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgTitle"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:src="@drawable/coverage"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subtitle1"
+                    style="@style/EnrollTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:gravity="center_horizontal"
+                    android:text="My Coverage"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subtitle2"
+                    style="@style/EnrollmentTextViewAppearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardTopMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:gravity="center_horizontal"
+                    android:text="@string/coverage_info"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/timer_coverage_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="30dp"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_stop_watch"
+                    app:drawableTint="@color/white"
+                    tools:text="12:12:12" />
+
+            </LinearLayout>
+
+
+            <!--This is the coverages data-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/coverages_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro3"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_enrollment_my_coverage" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
