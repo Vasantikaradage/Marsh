@@ -215,6 +215,7 @@ public class LoginActivity extends AppCompatActivity {
                 showLoading();
                 LogMyBenefits.d(LogTags.LOGIN_ACTIVITY, "Login Process Started!");
                 login();
+                //testing
             } else {
                 loginError("Check your internet connection!");
             }
