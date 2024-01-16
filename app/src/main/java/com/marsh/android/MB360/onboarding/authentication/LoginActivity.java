@@ -214,8 +214,32 @@ public class LoginActivity extends AppCompatActivity {
             if (isConnected) {
                 showLoading();
                 LogMyBenefits.d(LogTags.LOGIN_ACTIVITY, "Login Process Started!");
+
                 login();
                 //testing
+
+               // login();
+                int[] numbers = {10, 5, 8, 20, 15};
+
+                int firstMax = Integer.MIN_VALUE;
+                int secondMax = Integer.MIN_VALUE;
+
+                for (int number : numbers) {
+                    // Update firstMax and secondMax based on the current number
+                    if (number > firstMax) {
+                        secondMax = firstMax;
+                        firstMax = number;
+                    } else if (number > secondMax && number != firstMax) {
+                        secondMax = number;
+                    }
+                }
+
+                if (secondMax != Integer.MIN_VALUE) {
+                    System.out.println("Second Highest Number: " + secondMax);
+                } else {
+                    System.out.println("There is no second highest number.");
+                }
+
             } else {
                 loginError("Check your internet connection!");
             }
