@@ -216,6 +216,7 @@ public class LoginActivity extends AppCompatActivity {
                 LogMyBenefits.d(LogTags.LOGIN_ACTIVITY, "Login Process Started!");
 
                 login();
+<<<<<<< HEAD
                 //testing
 
                // login();
